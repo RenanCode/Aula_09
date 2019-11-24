@@ -1,74 +1,41 @@
 <!DOCTYPE html>
 <html>
-	
-
-<head>
-	<meta charset="UTF-8">
-	<link href="favicon.ico" rel="shortcut icon" />
-	<title>IFSP - Pirituba</title>
-	<meta name="description" content="">
-	<meta name="author" content="Renan Barbosa">
-	<link href="stylesheet.css" rel="stylesheet">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
-</head>
-
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 <body>
+  
+<div id="mydiv"></div>
 
-	<header id="cabecalho">
-			<div class="cab_verde"><img src="logo_IFSP.jpg" style="max-width:100%;height:auto;" alt="Logo do IFSP" /></div>
-		<div class="div2">
-			<nav id="menu">
-				<ul class='barra_menu'>
-					<li><a class='current' href='./index.html'>&emsp;Home&emsp;</a></li>
-					<li><a href='./eventos.html'>&emsp;Eventos&emsp;</a></li>
-					<li><a href='./contato.html'>&emsp;Contatos&emsp;</a></li>
-					<li><a href='./sobre.html'>&emsp;Sobre&emsp;</a></li>
-					<li><a href='./entrar.html'>&emsp;Entrar&emsp;</a></li>
-				</ul>
-			</nav>
-			</div>
-	</header>
+<script type="text/babel">
+class Hello extends React.Component {
+  render() {
+    return <h1>Olá! Mundoo</h1>
+  }
+}
+const Example = props => {
+    return (
+        <Banner
+            logo="React Banner"
+            url={ window.location.pathname }
+            items={[
+                { "content": "Example Link", "url": "/example" },
+                { "content": "Another", "url": "/another" },
+                {
+                    "content": "Link w/ Children",
+                    "url": "/children",
+                    "children": [
+                        { "content": "John", "url": "/children/john" },
+                        { "content": "Jill", "url": "/children/jill" },
+                        { "content": "Jack", "url": "/children/jack" }
+                    ]
+                }
+            ]} />
+    )
+}
+ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+ReactDOM.Example(<Hello />, document.getElementById('mydiv'))
+</script>
 
-	<nav>
-		<div class="div3">
-				<video width="320" height="240" autoplay>
-						<source src="y2mate.com - imagine_dragons_believer_audio_IhP3J0j9JmY.mp3" type="video/mp4">
-							<track> Imagine Dragons Believer<track>
-								Your browser does not support the video tag.
-					  </video>
-		</div>
-		<aside id="eventos">
-			<h3> Eventos</h3>
-			<a href="https://ptb.ifsp.edu.br/index.php/2016-07-07-16-29-03">
-				<h4>[Últimas Notícias]</h4>
-			</a>
-			<br />
-			<align="center">
-				<img src="oficina_ifsp_pirituba.jpg" style="max-width:100%;height:auto;"
-					alt=" Publicidade - Eventos Oficina IFSP" />
-				<p><br>
-					<font size="4">Oficina sobre o livro "O ponto zero da revolução", de Silvia Federici </font>
-				</p>
-				</align>
-		</aside>
-	</br>
-		<h3>
-			<n> Sobre a Biblioteca</n>
-		</h3>
-		<img src="biblioteca.jpg" style="max-width:100%;height:auto;" alt="Biblioteca" />
-	</br>
-		<iframe width="600" height="367" src="https://www.youtube.com/embed/yVbOcB1ryh0" frameborder="0"
-			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</nav>
-	<footer>
-		<p>
-			&copy; <font size="2">IFSP - Instituto Federal de Educação, Ciência e Tecnologia de São Paulo <br /> Câmpus
-				Pirituba -
-				Endereço: Av. Mutinga, 951 - Jardim Santo Elias, São Paulo - SP, 05110-000
-				<br />Telefone: (11) 98614-0334
-			</font>
-		</p>
-	</footer>
 </body>
-
 </html>
